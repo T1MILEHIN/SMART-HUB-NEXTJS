@@ -51,7 +51,7 @@ const DesktopNavLinks = () => {
             <motion.nav variants={nav_variant} animate={toggle && !FullScreen ? "initial" : !FullScreen ? "final" : ""} className="lg:static absolute max-w-full top-[60px] right-0 left-0 duration-300 lg:shadow-none">
                 <motion.ul variants={nav_variant} animate={toggle && !FullScreen ? "initial" : "final"} className="font-medium bg-white lg:bg-transparent py-2 flex flex-col items-center justify-center lg:flex-row lg:space-x-10 shadow-xl md:shadow-none">
                     <Link href={'/'}><motion.p variants={link_variant} whileHover="hover">Home</motion.p></Link>
-                    <Link href={'/'}><motion.p variants={link_variant} whileHover="hover">About</motion.p></Link>
+                    <Link href={'/about'}><motion.p variants={link_variant} whileHover="hover">About</motion.p></Link>
                     <Link href={'/'}><motion.p variants={link_variant} whileHover="hover">Products</motion.p></Link>
                     <Link href={'/'}><motion.p variants={link_variant} whileHover="hover">Contact</motion.p></Link>
                     {/* {userId ?
