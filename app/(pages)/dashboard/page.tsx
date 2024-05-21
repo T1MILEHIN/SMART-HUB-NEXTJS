@@ -2,8 +2,10 @@ import React from 'react'
 
 const Page = () => {
   return (
-    <div>Page</div>
+    <main className="flex min-h-screen justify-center items-center ">
+      <div>DASHBOARD Page</div>
+    </main>
   )
 }
 
-export default Page
+export default Page;
