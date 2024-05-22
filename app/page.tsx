@@ -18,7 +18,8 @@ async function Home() {
     <>
       <Header />
       <main className="flex min-h-screen justify-center items-center ">
-        <h1 className="">SMART HUB {user?.firstName} {user?.lastName} {user?.email}</h1>
+        <h1 className="">SMART HUB {user?.firstName} {user?.lastName}</h1>
+
       </main>
       <Footer />
     </>

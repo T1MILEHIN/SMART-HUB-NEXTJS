@@ -2,6 +2,7 @@ import { FaBars } from "react-icons/fa";
 import Link from "next/link";
 import { UserButton, auth } from "@clerk/nextjs";
 import DesktopNavLinks from "./desktopNavLinks";
+import MobileNav from "./mobileNav";
 
 const Header = () => {
     const { userId } = auth()
@@ -10,7 +11,12 @@ const Header = () => {
             <div>
                 <h1 className="text-white text-lg md:text-base font-medium italic">SMART HUB</h1>
             </div>
-            <DesktopNavLinks />
+            <div className="md:block hidden">
+                <DesktopNavLinks />
+            </div>
+            <div className="md:hidden block">
+                <MobileNav />
+            </div>
             <div>
                 {userId ?
                     <div className="flex gap-5 items-center">
@@ -31,7 +37,6 @@ const Header = () => {
                         </Link>
                     </div>
                 }
-                {/* <FaBars onClick={() => toggleHamBurger()} className="text-white block lg:hidden text-3xl cursor-pointer z-[99999999]" /> */}
             </div>
         </header>
     )
